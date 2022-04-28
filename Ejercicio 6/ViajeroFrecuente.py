@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 class ViajeroFrecuente:
     __num_viajero:int = 0
     __dni = ""
@@ -16,7 +19,7 @@ class ViajeroFrecuente:
         return self.__num_viajero
 
     def muestra(self):
-        return f'{self.__num_viajero} {self.__dni} {self.__nombre} {self.__apellido} {self.__millas_acum}'
+        return f'Numero: {self.__num_viajero} DNI:{self.__dni} Nombre: {self.__nombre} Apellido: {self.__apellido} Millas: {self.__millas_acum}'
 
     def cantidadTotalMillas(self):
         return self.__millas_acum
@@ -33,3 +36,14 @@ class ViajeroFrecuente:
         else:
             print('Error de Operacion'.center(30, '-'))
             return self.__millas_acum
+        
+    def __gt__(self, otro:ViajeroFrecuente):
+        return self.__millas_acum > otro.cantidadTotalMillas()
+
+    def __add__(self, otro):
+        self.__millas_acum = self.__millas_acum + otro
+        return self
+
+    def __sub__(self, otro):
+        self.__millas_acum = self.__millas_acum - otro
+        return self

@@ -1,14 +1,12 @@
 import os
-from Menu import Menu
-from Manejador import ManejadorViajero
-
-
+from Menu6 import Menu
+from Manejador6 import ManejadorViajero
 
 
 if __name__ == "__main__":
     os.system("cls")
     manViajero = ManejadorViajero()
-    manViajero .test()
+    manViajero.test()
     manViajero.cargarViajero()
     manViajero.buscar()
     menu = Menu()
@@ -18,4 +16,9 @@ if __name__ == "__main__":
         opcion = input('Tu opcion: ')
         menu.menuopciones(opcion)
     else:
-        print('Salimos del programa'.center(30, '-'))
+        print('Salimos del Menu'.center(30, '-'))
+    print('Buscamos maximo'.center(30, '-'))
+    manViajero.maximo()
+    manViajero.acumularSobrecargar()
+    manViajero.canjearSobrecarga()
+    
