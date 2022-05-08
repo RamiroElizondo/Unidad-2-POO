@@ -13,7 +13,9 @@ class Integrante:
         self.__dni = dni
         self.__categoria = categoria
         self.__rol = rol
-    
+
+    def mostrarObjeto(self):
+        return print(f'Id: {self.__idProyecto} Nombre: {self.__nombre} DNI: {self.__dni} Categoria: {self.__categoria} Rol: {self.__rol}')
     def getId(self):
         return self.__idProyecto
     
