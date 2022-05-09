@@ -38,7 +38,6 @@ class Conjunto:
                         valor =True
                     else:
                         valor = False
-
         return valor
 
 

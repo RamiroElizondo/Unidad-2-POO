@@ -9,11 +9,10 @@ class ManejadorViajero:
         self.__listaobjetos = []
     
     def test(self):
-        objetoP = ViajeroFrecuente(250, 24941821, 'Ramiro', 'Elizondo', 1500)
-        print('Prueba: {}'.format(objetoP.muestra()))
-        print('Cantidad: {}'.format(objetoP.cantidadTotalMillas()))
-        print('Acumula: {}'.format(objetoP.acumularMillas(1500)))
-        print('Canjeo: {}'.format(objetoP.canjerarMillas(2000)))
+        objeto1 = ViajeroFrecuente(250, 24941821, 'Ramiro', 'Elizondo', 1500)
+        objeto1 == 1000
+        objeto1 = 2000 + objeto1
+        objeto1 = 500 - objeto1
 
     def cargarViajero(self):
         with open("Ejercicio 7\Datos.txt", 'r', encoding='utf8') as archivo:
@@ -63,10 +62,9 @@ class ManejadorViajero:
                 print(objeto[i].muestra)
     
     def acumularSobrecargar(self):
-        i = 0
         for objeto in self.__listaobjetos:
             cant2 = int(input('Ingrese la cantidad de millas recorridas: '))
-            objeto[i].__millas_Acum = objeto[i].__millas_acum + cant2
+            objeto.__millas_Acum = objeto.__millas_acum + cant2
 
     def maximo(self):
         maximo = self.__listaobjetos[0]
@@ -96,6 +94,8 @@ class ManejadorViajero:
             objeto = objeto - cant2  
             print(objeto.muestra())
     
+
+    #Ejercicio 7
     def compararSobrecargar(self):
         print('\n')
         print('Comparar'.center(30, '-'))

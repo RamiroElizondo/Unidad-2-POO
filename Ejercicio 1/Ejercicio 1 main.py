@@ -1,7 +1,14 @@
 from Email import Email
 
+def test():
+    objeto = Email('ramiro','gmail','com','123')
+    print(objeto.retornaremail())
+    con = objeto.comprobar('123')
+    objeto.modificar('247')
+    objeto2 = Email.crearcuenta('juanperez@gmail.com')
 
 if __name__ == "__main__":
+    test()
     nombre = input("Ingrese su Nombre: ")
     nombrec = input("Ingrese el nombre de la cuenta: ")
     idd = input('Ingresar ID de la cuenta: ')

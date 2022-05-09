@@ -7,9 +7,17 @@ class ManejadorPlan:
 
     def __init__(self):
         self.__listaobjetos = []
-    
+
+    def test(self):
+        objeto = PlanAhorro(1,'hilux','4x4',2000000)
+        objeto.setcantCuotasP(15)
+        objeto.setcantCuotasLicitar(80)
+        objeto.setvalorVehiculo(3000000)
+        objeto.muestra()
+        objeto.mostrar()
+
     def cargarObjetos(self):
-        with open('Ejercicio 5\\planes.csv', 'r', encoding='utf8') as archivo:
+        with open('Unidad-2-POO\Ejercicio 5\planes.csv', 'r', encoding='utf8') as archivo:
             reader = csv.reader(archivo, delimiter=';')
             for linea in reader:
                 objeto = PlanAhorro(int(linea[0]),str(linea[1]),str(linea[2]),int(linea[3]))

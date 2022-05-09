@@ -1,7 +1,20 @@
 from Ventana import Ventana
 
-
+def test():
+    print('Prueba'.center(30,'-'))
+    objeto = Ventana('Prueba',20,30,100,200)
+    objeto.mostrar()
+    objeto.moverDerecha(10)
+    objeto.mostrar()
+    objeto.moverIzquierda(20)
+    objeto.mostrar()
+    objeto.bajar(10)
+    objeto.mostrar()
+    objeto.subir(10)
+    objeto.mostrar()
+    print('Prueba'.center(30,'-'))
 if __name__ ==  '__main__':
+    test()
     print('==== Ventana Inicio ====')
     ventanaInicio= Ventana('Inicio')
     ventanaInicio.mostrar()

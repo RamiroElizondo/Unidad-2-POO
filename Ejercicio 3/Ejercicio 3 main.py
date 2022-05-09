@@ -1,6 +1,9 @@
 import csv
 from Registro import Registro
 
+def test():
+    objeto = Registro(20.0,60,1009)
+    print(objeto.muestra())
 
 def iniciar(matrizz, listaA):
     for f in range(30):
@@ -78,7 +81,8 @@ def listar(matriz: list[list[Registro]], dia):
 
 
 if __name__ == '__main__':
-    with open('Registro.txt', 'r', encoding='utf8') as archivo:
+    test()
+    with open('Unidad-2-POO\Ejercicio 3\Registro.txt', 'r', encoding='utf8') as archivo:
         matriz = []
         reader = csv.reader(archivo, delimiter=',')
         matriz = iniciar(matriz, reader)

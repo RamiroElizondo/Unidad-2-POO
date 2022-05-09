@@ -9,11 +9,9 @@ class ManejadorViajero:
         self.__listaobjetos = []
     
     def test(self):
-        objetoP = ViajeroFrecuente(250, 24941821, 'Ramiro', 'Elizondo', 1500)
-        print('Prueba: {}'.format(objetoP.muestra()))
-        print('Cantidad: {}'.format(objetoP.cantidadTotalMillas()))
-        print('Acumula: {}'.format(objetoP.acumularMillas(1500)))
-        print('Canjeo: {}'.format(objetoP.canjerarMillas(2000)))
+        objeto1 = ViajeroFrecuente(250, 24941821, 'Ramiro', 'Elizondo', 1500)
+        objeto1 = objeto1 + 2000
+        objeto1 = objeto1 - 500 
 
     def cargarViajero(self):
         with open("Ejercicio 6\Datos.txt", 'r', encoding='utf8') as archivo:

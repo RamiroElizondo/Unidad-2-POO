@@ -7,6 +7,7 @@ import os
 if __name__ == '__main__':
     os.system("cls")
     maP = ManejadorPlan()
+    maP.test()
     maP.cargarObjetos()
     opcion = None
     menu = Menu()
